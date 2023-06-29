@@ -4,7 +4,8 @@ const express = require("express");
 
 const projectModel= require("./projects-model");
 
-const router = expres.Router();
+const router = express.Router();
+const mw = require("./projects-middleware");
 
 router.get("/", async(req,res,next) =>{
     try{
@@ -53,7 +54,7 @@ router.delete("/:id", mw.validateUserId, async (req, res, next) => {
 
 router.get("/:id/actions", mw.validateID, async (req, res, next) => {
         try {
-            const actions = await projectsModel.getProjectActions(req.params.id)
+            const actions = await projectModel.getProjectActions(req.params.id)
             res.json(actions);
         } catch (error) {
             next(error);

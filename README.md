@@ -53,8 +53,8 @@ Veritabanını orijinal durumuna sıfırlamanıza izin veren bir _"resetdb"_ kom
 
 - [ ] `[GET] /api/actions`
   - Yanıtın gövdesi olarak bir dizi eylem (action) (veya boş bir dizi) döndürür.
-- [ ] `[GET] /api/actions/:id`
-  - Yanıtın gövdesi olarak verilen "id" ile bir action döndürür.
+- [e ] `[GET] /api/actions/:id`
+  - Yanıtın gövdesi olarak veriln "id" ile bir action döndürür.
   - Verilen 'id' ile herhangi bir eylem yoksa, 404 durum koduyla yanıt verir.
 - [ ] `[POST] /api/actions`
   - Yeni oluşturulan eylemi yanıtın gövdesi olarak döndürür.
